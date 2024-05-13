@@ -1,0 +1,86 @@
+.approach {
+    position: relative;
+    min-height: 200vh;
+
+    .images-wrapper {
+        position: absolute;
+        bottom: 0;
+        height: 100vh;
+        width: 100%;
+        //if you want to hide the overflow (left picture goes beyond the frame without it)
+        // overflow: hidden;
+
+        .background-image {
+            position: absolute;
+
+            &.first-image {
+                right: 0;
+                top: 0;
+                width: 432px;
+                height: 520px;
+            }
+
+            &.second-image {
+                left: 0;
+                top: 260px;
+                width: 556px;
+                height: 669px;
+            }
+        }
+    }
+
+    .text-content-wrapper {
+        position: sticky;
+        top: 0;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        color: white;
+
+        .title {
+            font-size: 60px;
+            line-height: 60px;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            line-height: 28px;
+            width: 45%;
+            margin: 0 auto;
+        }
+
+        .download {
+            background: rgba(250, 250, 250, 1);
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            border-radius: 50px;
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.3rem;
+            margin-top: 4rem;
+
+            a {
+                color: #000000;
+                padding: 0.3rem;
+            }
+        }
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #b8d2ff, #bd8fff, #fdbc51);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: moving-gradient 5s linear infinite;
+    text-decoration: none;
+}
