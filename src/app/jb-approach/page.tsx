@@ -38,14 +38,14 @@ export default function JuiceboxPageDemo() {
   );
 }
 
-// TAILWIND VERSION
+// //TAILWIND VERSION
 // export default function JuiceboxPageDemo() {
 //   return (
 //     <div className="bg-black">
 //       <div className="flex min-h-[100vh] items-center justify-center bg-violet-500 text-3xl">Previous section here</div>
 
-//       <div className="relative min-h-[200vh]">
-//         <div className="absolute bottom-0 h-[100vh] w-full">
+//       <div className="relative min-h-[300vh]">
+//         <div className="absolute bottom-[100vh] h-[100vh] w-full bg-green-500/50">
 //           <img
 //             src="/pictures/meaningful_connections_image1.png"
 //             alt="First Background"
@@ -54,7 +54,9 @@ export default function JuiceboxPageDemo() {
 //           <img
 //             src="/pictures/meaningful_connections_image2.png"
 //             alt="Second Background"
-//             className="background-image second-image absolute left-0 top-[260px] h-[520px] w-[432px]"
+//             className="background-image second-image absolute left-0 bottom-0
+//             h-[520px] w-[432px]"
+//             //top-[260px]
 //           />
 //         </div>
 //         <div className="sticky top-0 flex min-h-[100vh] flex-col justify-center bg-red-500/50 text-center text-xl text-white">
