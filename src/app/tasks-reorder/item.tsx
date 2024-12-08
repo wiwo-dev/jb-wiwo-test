@@ -12,15 +12,10 @@ type Props = {
 };
 
 export function Item({ children, value, item, handleSetItemChild }: Props) {
-  //const [isChild, setIsChild] = useState(false);
-
-  const handleDrag = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
-    //console.log(info.point.x, info.point.y);
+  const handleHorizontalDrag = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     if (info.offset.x > 30) {
-      //  setIsChild(true);
       handleSetItemChild(item.value, true);
     } else if (info.offset.x < -10) {
-      //  setIsChild(false);
       handleSetItemChild(item.value, false);
     }
   };
@@ -36,7 +31,7 @@ export function Item({ children, value, item, handleSetItemChild }: Props) {
         dragConstraints={{ left: -50, right: 50 }}
         dragSnapToOrigin={true}
         dragListener={false}
-        onDrag={handleDrag}
+        onDrag={handleHorizontalDrag}
         className={cn(
           "w-[500px] rounded-md bg-orange-300 p-4 my-1 flex items-center gap-3 select-none",
           item.isChild && "bg-orange-200 py-3"
